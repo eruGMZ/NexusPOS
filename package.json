@@ -1,0 +1,33 @@
+{
+  "name": "snack-demo",
+  "version": "1.0.0",
+  "description": "Snack POS demo — Electron + Vanilla JS",
+  "main": "src/main/main.js",
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "web:prepare": "node scripts/prepare-web.mjs",
+    "android:sync": "npm run web:prepare && npx cap sync android",
+    "android:open": "npx cap open android",
+    "android:build-debug": "npm run android:sync && cd android && gradlew.bat assembleDebug"
+  },
+  "keywords": [],
+  "author": "MiNegocio",
+  "license": "ISC",
+  "devDependencies": {
+    "@electron-forge/cli": "^7.8.1",
+    "@electron-forge/maker-squirrel": "^7.8.1",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.8.1",
+    "@electron-forge/plugin-fuses": "^7.8.1",
+    "@electron/fuses": "^1.8.0",
+    "electron": "^42.1.0"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.2.0",
+    "@capacitor/cli": "^7.2.0",
+    "@capacitor/core": "^7.2.0",
+    "chart.js": "^4.5.1",
+    "electron-squirrel-startup": "^1.0.1"
+  }
+}

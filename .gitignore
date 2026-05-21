@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+
+# Runtime logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Build outputs
+out/
+dist/
+www/
+release/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.iml
+
+# Electron packaging artifacts
+*.tsbuildinfo
+
+# Android / Gradle local and generated files
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/captures/
+android/.idea/
+android/*.iml
+android/app/*.keystore
+android/*.jks
+
+# Capacitor generated plugin intermediate
+android/capacitor-cordova-android-plugins/

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">MiNegocioPOS</string>
+    <string name="title_activity_main">MiNegocioPOS</string>
+    <string name="package_name">com.minegocio.pos</string>
+    <string name="custom_url_scheme">com.minegocio.pos</string>
+</resources>
