@@ -794,3 +794,55 @@ select.input:focus {
   gap: 8px;
   margin-bottom: 12px;
 }
+
+@media (max-width: 767px) and (orientation: portrait) {
+  .pos-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(0, 1fr) auto;
+    gap: 10px;
+    height: calc(100dvh - var(--topbar-height, 0px) - 116px);
+    min-height: 0;
+  }
+
+  .pos-products-panel {
+    min-height: 0;
+    overflow: auto;
+    padding-bottom: 8px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .pos-cart {
+    position: sticky;
+    bottom: 0;
+    max-height: 50dvh;
+    min-height: 240px;
+    overflow: hidden;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .pos-cart__items {
+    max-height: 24dvh;
+  }
+
+  .cart-item {
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      'name subtotal'
+      'qty remove';
+    align-items: center;
+  }
+
+  .cart-item > :nth-child(1) { grid-area: name; }
+  .cart-item > :nth-child(2) { grid-area: qty; }
+  .cart-item > :nth-child(3) { grid-area: subtotal; justify-self: end; }
+  .cart-item > :nth-child(4) { grid-area: remove; justify-self: end; }
+
+  .pos-cart > div:last-child {
+    padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+}

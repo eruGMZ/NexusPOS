@@ -2,7 +2,7 @@ export const AppRole = Object.freeze({ Admin: 'Admin', Vendedor: 'Vendedor' });
 export const ShiftStatus = Object.freeze({ Open: 'Open', Closed: 'Closed' });
 
 export const USERS = [
-  { id: 1, username: 'admin', password: 'admin123', role: AppRole.Admin, displayName: 'Axel Ramirez' },
+  { id: 1, username: 'admin', password: 'admin123', role: AppRole.Admin, displayName: 'Admin' },
   { id: 2, username: 'vendedor', password: 'vend123', role: AppRole.Vendedor, displayName: 'Laura Mendez' },
 ];
 
@@ -23,7 +23,7 @@ export const CUSTOMERS = [
 ];
 
 export const EMPLOYEES = [
-  { id: 1, name: 'Axel Ramirez', role: AppRole.Admin, status: 'Activo', lastLogin: '2025-05-18 09:01' },
+  { id: 1, name: 'Admin', role: AppRole.Admin, status: 'Activo', lastLogin: '2025-05-18 09:01' },
   { id: 2, name: 'Laura Mendez', role: AppRole.Vendedor, status: 'Activo', lastLogin: '2025-05-18 09:05' },
   { id: 3, name: 'Jorge Salinas', role: AppRole.Vendedor, status: 'Inactivo', lastLogin: '2025-05-10 08:50' },
 ];
@@ -44,7 +44,7 @@ export const SHIFTS = [
     id: 2,
     date: '2025-05-16',
     shiftNumber: 2,
-    openedBy: 'Axel Ramirez',
+    openedBy: 'Admin',
     openTime: '14:00',
     closeTime: '21:00',
     initialFloat: 500,

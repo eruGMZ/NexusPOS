@@ -21,7 +21,7 @@ export function init(container, options) {
     container.innerHTML = `
       <div class="page-header"><h1>Punto de Venta</h1><p>Cobro rapido</p></div>
       <div class="pos-layout">
-        <div>
+        <div class="pos-products-panel">
           <div class="products-grid">
             ${PRODUCTS.map((p) => `<div class="product-card"><div>${p.category}</div><div style="font-weight:700">${p.name}</div><div style="margin:6px 0">$${p.price}</div><button class="product-card__add" data-add="${p.id}" ${p.stock <= 0 ? 'disabled' : ''}>+</button></div>`).join('')}
           </div>
